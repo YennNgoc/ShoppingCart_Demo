@@ -38,25 +38,25 @@
                             <th scope="col" class="border-0 bg-light">
                               <div class="py-2 text-uppercase">Quantity</div>
                             </th>
-                            <th scope="col" class="border-0 bg-light">
+                            <!-- <th scope="col" class="border-0 bg-light">
                               <div class="py-2 text-uppercase">Remove</div>
-                            </th>
+                            </th> -->
                           </tr>
                         </thead>
                         <tbody>
-                          {% for k,v in items.items %}
+                          {% for item in items %}
                           <tr>
                             <th scope="row" class="border-0">
                               <div class="p-2">
                                 <img src="{% static 'img/placeholder.png' %}"  alt="" width="70" class="img-fluid rounded shadow-sm">
                                 <div class="ml-3 d-inline-block align-middle">
-                                  <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">{{k}} is set to {{v}}</a></h5><span class="text-muted font-weight-normal font-italic d-block">Category: Watches</span>
+                                  <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">{{item.product_name}}</a></h5><span class="text-muted font-weight-normal font-italic d-block">Category: {{item.category}}</span>
                                 </div>
                               </div>
                             </th>
-                            <td class="border-0 align-middle"><strong>$79.00</strong></td>
-                            <td class="border-0 align-middle"><strong>3</strong></td>
-                            <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                            <td class="border-0 align-middle"><strong>{{item.price}}</strong></td>
+                            <td class="border-0 align-middle"><strong>{{item.quantity}}</strong></td>
+                            <!-- <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td> -->
                           </tr>
                           {% endfor %}
                         </tbody>
@@ -89,13 +89,13 @@
                     <div class="p-4">
                       <p class="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
                       <ul class="list-unstyled mb-4">
-                        <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>$390.00</strong></li>
-                        <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>$10.00</strong></li>
-                        <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>$0.00</strong></li>
+                        <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>{{order_subtotal}}</strong></li>
+                        <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>{{ship}}</strong></li>
+                        <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>{{tax}}</strong></li>
                         <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
-                          <h5 class="font-weight-bold">$400.00</h5>
+                          <h5 class="font-weight-bold">{{total}}</h5>
                         </li>
-                      </ul><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
+                      </ul><a href="{%url 'confirm' %}" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
                     </div>
                   </div>
                 </div>

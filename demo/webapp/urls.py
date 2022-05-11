@@ -10,6 +10,7 @@ urlpatterns = {
     path('pd/', views.product, name="product"),
     path('pd/<slug:product_id>', views.detail, name="single_product"),
     path('cart/', views.cart, name="cart"),
-    path('addcart/', views.add_pd, name="add"), 
+    path('addcart/<slug:product_id>', views.add_pd, name="add"), 
+    path('cart/confirm', views.confirm_cart, name="confirm"),
 }
 urlpatterns = format_suffix_patterns(urlpatterns)

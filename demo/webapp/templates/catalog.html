@@ -186,6 +186,7 @@ h2::after {
 </script>
 </head>
 <body>
+	<a href="{% url 'cart' %}">Show Cart</a> 
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
@@ -217,7 +218,7 @@ h2::after {
 										</ul>
 									</div>
 									<p class="item-price"><b style="font-size: 18px;">{{doc.product_info.product_price}} VND </b></br>{{doc.promotion.promotion_name}} </p>
-									<a href="{%url 'add'%}" method="POST"  class="btn btn-primary" >Add to Cart</a>
+									<a href="{%url 'add' doc.product_id %}" method="POST"  class="btn btn-primary" >Add to Cart</a>
 								</div>						
 							</div>
 						</div>
