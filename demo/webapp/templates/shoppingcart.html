@@ -9,13 +9,34 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
-        
+        <style>
+          body {
+              background: #e2eaef;
+              font-family: "Open Sans", sans-serif;
+            }
+          .btnme{ 
+              font-size: 13px;
+              font-weight: bold;
+              width: 100px;
+              color: #7ac400;
+              background: none;
+              border: 2px solid #7ac400;
+              margin-right: 10px;
+              margin-top: 15px;
+              }
+            .btnme:hover, .btnme:focus {
+                color: #fff;
+                background: #7ac400;
+                box-shadow: none;
+              }
+        </style>
     </head>
     <body>
+    <a href="{% url 'product' %}" style="margin-left: 87%;" class="btnme btn">Catalog</a>
         <div class="px-4 px-lg-0">
             <!-- For demo purpose -->
-            <div class="container text-white py-5 text-center">
-              <h2> Shopping Cart Demo</h2>
+            <div class="container text-white py-5 text-center"  style="margin-top: -60px;margin-bottom: -10px;">
+              <h2 style="color:black;"> <b>Shopping Cart</b> </h2>
             </div>
             <!-- End -->
           
@@ -25,22 +46,20 @@
                   <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
           
                     <!-- Shopping cart table -->
-                    <div class="table-responsive">
-                      <table class="table">
-                        <thead>
-                          <tr>
+                    <div class="table-responsive"  >
+                      <table class="table" >
+                        <thead >
+                          <tr >
                             <th scope="col" class="border-0 bg-light">
-                              <div class="p-2 px-3 text-uppercase">Product</div>
+                              <div class="p-2 px-3 text-uppercase" style="color: #7ac400;">Product</div>
                             </th>
                             <th scope="col" class="border-0 bg-light">
-                              <div class="py-2 text-uppercase">Price</div>
+                              <div class="py-2 text-uppercase" style="color: #7ac400;">Price</div>
                             </th>
-                            <th scope="col" class="border-0 bg-light">
+                            <th scope="col" class="border-0 bg-light" style="color: #7ac400;">
                               <div class="py-2 text-uppercase">Quantity</div>
                             </th>
-                            <!-- <th scope="col" class="border-0 bg-light">
-                              <div class="py-2 text-uppercase">Remove</div>
-                            </th> -->
+                            
                           </tr>
                         </thead>
                         <tbody>
@@ -68,24 +87,24 @@
           
                 <div class="row py-5 p-4 bg-white rounded shadow-sm">
                   <div class="col-lg-6">
-                    <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Coupon code</div>
+                    <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold" style="color: #7ac400;">Coupon code</div>
                     <div class="p-4">
                       <p class="font-italic mb-4">If you have a coupon code, please enter it in the box below</p>
                       <div class="input-group mb-4 border rounded-pill p-2">
                         <input type="text" placeholder="Apply coupon" aria-describedby="button-addon3" class="form-control border-0">
                         <div class="input-group-append border-0">
-                          <button id="button-addon3" type="button" class="btn btn-dark px-4 rounded-pill"><i class="fa fa-gift mr-2"></i>Apply coupon</button>
+                          <button id="button-addon3" type="button" class="btn btn-dark px-4 rounded-pill" style="background-color: #7ac400; border: none;"><i class="fa fa-gift mr-2"></i>Apply coupon</button>
                         </div>
                       </div>
                     </div>
-                    <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Instructions for seller</div>
+                    <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold" style="color: #7ac400;">Instructions for seller</div>
                     <div class="p-4">
                       <p class="font-italic mb-4">If you have some information for the seller you can leave them in the box below</p>
                       <textarea name="" cols="30" rows="2" class="form-control"></textarea>
                     </div>
                   </div>
                   <div class="col-lg-6">
-                    <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
+                    <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold" style="color: #7ac400;">Order summary </div>
                     <div class="p-4">
                       <p class="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
                       <ul class="list-unstyled mb-4">
@@ -95,7 +114,7 @@
                         <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
                           <h5 class="font-weight-bold">{{total}}</h5>
                         </li>
-                      </ul><a href="{%url 'confirm' %}" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
+                      </ul><a href="{%url 'confirm' %}" class="btn btn-dark rounded-pill py-2 btn-block" style="background-color: #7ac400; border: none;">Procceed to checkout</a>
                     </div>
                   </div>
                 </div>

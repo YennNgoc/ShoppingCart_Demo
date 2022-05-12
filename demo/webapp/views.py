@@ -10,9 +10,10 @@ from rest_framework.decorators import api_view
 from rest_framework import status
 from rest_framework.response import Response
 
-# Connect to our Redis instance
+# Connect to Redis instance
 redis_instance = redis.StrictRedis(host=settings.REDIS_HOST,
                                   port=settings.REDIS_PORT, db=0)
+
 db_handle, _ = get_db_handle('mongodb', 'localhost', '27017','','')
 
 @api_view(['GET', 'POST'])

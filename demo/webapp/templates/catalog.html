@@ -176,6 +176,21 @@ h2::after {
 	color: #ffc000;
 }
 .col-sm-3 { margin-top:  3%; }
+.btn{ 
+	font-weight: bold;
+	font-size: 13px;
+	width: 100px;
+	color: #7ac400;
+	background: none;
+    border: 2px solid #7ac400;
+	margin-right: 10px;
+	margin-top: 15px;
+	}
+.btn:hover, .btn:focus {
+	color: #fff;
+	background: #7ac400;
+	box-shadow: none;
+	}
 </style>
 <script>
 	$(document).ready(function(){
@@ -186,7 +201,7 @@ h2::after {
 </script>
 </head>
 <body>
-	<a href="{% url 'cart' %}">Show Cart</a> 
+<a href="{% url 'cart' %}" style="margin-left: 90%;" class="btn ">Show cart</a>
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">

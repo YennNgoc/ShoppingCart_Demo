@@ -79,19 +79,7 @@ h2::after {
 .carousel .item h4, .carousel .item p, .carousel .item ul {
 	margin-bottom: 5px;
 }
-.carousel .thumb-content .btn {
-	color: #7ac400;
-    font-size: 11px;
-    text-transform: uppercase;
-    font-weight: bold;
-    background: none;
-    border: 1px solid #7ac400;
-    padding: 6px 14px;
-    margin-top: 5px;
-    line-height: 16px;
-    border-radius: 20px;
-}
-.carousel .thumb-content .btn:hover, .carousel .thumb-content .btn:focus {
+.btn:hover, .btn:focus {
 	color: #fff;
 	background: #7ac400;
 	box-shadow: none;
@@ -176,6 +164,16 @@ h2::after {
 	color: #ffc000;
 }
 .col-sm-3 { margin-top:  3%; }
+.btn{ 
+	font-weight: bold;
+	font-size: 13px;
+	width: 100px;
+	color: #7ac400;
+	background: none;
+    border: 2px solid #7ac400;
+	margin-right: 10px;
+	margin-top: 15px;
+	}
 </style>
 <script>
 	$(document).ready(function(){
@@ -187,15 +185,16 @@ h2::after {
 </head>
 <body>
 {% if user.is_authenticated%}
-    <a href="{% url 'logout' %}">Logout</a> <br>
+    <a href="{% url 'logout' %}"  class="btn " style="margin-left: 90%;">Logout</a> <br>
 {% else %}
-    <a href="{% url 'register' %}">Register</a> <br>
-    <a href="{% url 'login' %}">Login</a> 
-{% endif %}
+<div style="margin-left: 83%;">
+    <a href="{% url 'register' %}" class="btn" >Register</a> <a href="{% url 'login' %}"  class="btn ">Login</a> 
+</div>
+	{% endif %}
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<h2><b>BEST SELLER</b></h2>
+			<h2><b>N02's BEST SELLER</b></h2>
 			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
 			<!-- Carousel indicators -->
 			 

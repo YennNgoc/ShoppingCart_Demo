@@ -1,6 +1,13 @@
 body {
     background: #487dc7;
-    background: -webkit-linear-gradient(to bottom, #c94b2c, #1d4d8b);
-    background: linear-gradient(to bottom, #c94b2c, #1d4d8b);
     min-height: 100vh;
+  }
+.btn{ 
+  font-size: 13px;
+  width: 100px;
+  color: #7ac400;
+  background: none;
+  border: 2px solid #7ac400;
+  margin-right: 10px;
+  margin-top: 15px;
   }
